@@ -33,7 +33,7 @@ def download():
             for name in song_name:
                 url = requests.get(song_url).json()['data'][0]['url']
                 r = requests.get(url)
-                print('开始下载歌曲到当前的文件夹')
+                print('开始下载%s到当前的文件夹' % name)
                 with open('%s.mp3' % name, 'wb') as f:
                     f.write(r.content)
                 del song_name[0]
