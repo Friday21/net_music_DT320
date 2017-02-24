@@ -40,8 +40,9 @@ def download():
                 break
         print('下载结束，看看去吧')
     except Exception as e:
-        print('可能没有320K')
-
+        print('网易云版权问题，链接挂了')
+    finally:
+        download()
 if __name__ == '__main__':
     try:
         get_song_id()
