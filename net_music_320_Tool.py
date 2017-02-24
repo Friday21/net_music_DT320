@@ -36,6 +36,8 @@ def download():
                 print('开始下载歌曲到当前的文件夹')
                 with open('%s.mp3' % name, 'wb') as f:
                     f.write(r.content)
+                del song_name[0]
+                break
         print('下载结束，看看去吧')
     except Exception as e:
         print('可能没有320K')
